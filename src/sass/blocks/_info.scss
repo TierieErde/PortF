@@ -1,0 +1,37 @@
+.info {
+    background-color: $bg-color2;
+    &__about {
+        padding-top: 40px;
+        
+    }
+    &__title {
+        
+        text-align: center;
+        font-size: 40px;
+        color: $second-color;
+        font-weight: 500;
+    }
+    &__descr {
+        padding: 10px 10px 10px 10px;
+        margin: 0 auto;
+        margin-top: 24px;
+        width: 80%;
+        font-size: 20px;
+        color: white;
+        background-color: $bg-color1;
+        text-align: center;
+    }
+    &__exp {
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__exp__title {
+        text-align: center;
+        font-size: 26px;
+        color: $third-color;
+        font-weight: 500;
+    }
+}
