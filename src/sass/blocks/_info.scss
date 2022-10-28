@@ -2,8 +2,16 @@
     
     background-color: $bg-color2;
     &__about {
-        padding-top: 40px;
-        
+        padding-top: 40px; 
+    }
+    &__Behance {
+        text-decoration: none;
+        color: white;
+        transition: 0.6s all;
+        &:hover {
+            text-decoration: none;
+            color: $second-color;
+        }
     }
     &__title {
         
@@ -20,7 +28,7 @@
         font-size: 20px;
         color: white;
         background-color: $bg-color1;
-        text-align: center;
+        text-align:justify;
     }
     &__exp {
     
@@ -134,10 +142,15 @@
     }
     &__tooltip{
         opacity: 0;
+        width: max-content;
+        max-width: 400px;
+        // flex-direction: row;
+        flex-wrap: wrap;
         padding: 5px 5px 5px 5px;
+        
         position: absolute;
-        top: 20px;
-        left: 5px;
+        top: 0px;
+        right: 0px;
         z-index: 3;
         background-color: $second-color;
         color:white;

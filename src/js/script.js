@@ -69,12 +69,15 @@ const disableselect = (e) => {
 let setUpToolTip = function() {
 	let tooltip = "",
 		toolTipDiv=document.querySelector(".info__tooltip"),
-		toolTipElements = Array.from(document.querySelectorAll(".hover-reveal")),timer;
-	let displayTooltip = function(b,obj) {
-		tooltip = obj.dataset.tooltip;
+		toolTipElements = Array.from(document.querySelectorAll(".hover-reveal")),
+		timer;
+
+
+	let displayTooltip = function(b) {
+		tooltip = this.dataset.tooltip;
 		toolTipDiv.innerHTML = tooltip;
-		toolTipDiv.style.top = b.pageY +"px";
-		toolTipDiv.style.left = b.pageX + "px";
+		toolTipDiv.style.top = b.pageY +20 +"px";
+		toolTipDiv.style.left = b.pageX +20 + "px";
 		// toolTipDiv.style.opacity=1;
 		fadeIn(toolTipDiv);
 	};	
@@ -84,7 +87,7 @@ let fadeOut = function(element) {
 	if(!timer) {
 		 timer = setInterval(function() {
 			if(opac <= 0.1) {
-				clearInterval (timer);
+				clearInterval(timer);
 				timer = null;
 				element.style.opacity=0;
 				element.style.display='none';
@@ -96,34 +99,59 @@ let fadeOut = function(element) {
 };
 //затухание
 let fadeIn = function(element) { 
-	var opac = 1;
-	element.style.display='block';
+	var opac = 0.1;
+	element.style.display='inline-block';
 	var timer = setInterval(function() {
 		if(opac >= 1) {
-			clearInterval (timer);
-			
+			clearInterval (timer);	
 		}
 		element.style.opacity=opac;
-		opac -= opac * 0.1;	
+		opac += opac * 0.1;	
 	}, 10);
 };
 
-	toolTipElements.forEach(function(elem) {
-		let timeout;
+let bindEvents=function(elem) {
+	let timeout;
 		elem.addEventListener("mouseenter", function(b) {
-			let that=this;
-			let timeout = setTimeout(function(){
-				displayTooltip(b, that);
-			}, 600);
+			// let that=this;
+			timeout = setTimeout(function(){
+				displayTooltip.call(elem, b);
+			}, 400);
 			
 		});
 		elem.addEventListener("mouseleave", function(b) {
 			clearTimeout(timeout);
 			fadeOut(toolTipDiv);
-		});
-	})
+			element.style.display='none';
+			// element.style.opacity=0;
+		});	
+}
+
+	toolTipElements.forEach(bindEvents); 
+	
 };
 setUpToolTip();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
