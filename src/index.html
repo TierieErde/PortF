@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AlexZ Portfolio</title>
+    <title>AlexZ WEB-разработка</title>
     <meta name="title" content="Алексей Звягинцев портфолио">
     <meta name="description" content="Здесь вы сможете ознакомиться с моими работами и узнать больше обо мне">
 
@@ -33,6 +33,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="144x144"  href="icons/favicon/android-icon-144x144.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
@@ -40,8 +41,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://kit.fontawesome.com/9b5152b180.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css" >
 </head>
 <body>
     <div class="header">
@@ -55,9 +57,9 @@
             
         </div>
         <div class="header__links">
-            <a href="#" class="header__links__webdev">WEB-разработка</a>
+            <a href="#webdev" class="header__links__webdev">WEB-разработка</a>
             <div class="header__links__line"></div>
-            <a href="#"class="header__links__3D">3D дизайн визуализация</a>
+            <a href="#Design"class="header__links__3D">3D дизайн визуализация</a>
         </div>
         <div class="header__burger">
             <span></span>
@@ -67,11 +69,11 @@
     </div>
     <aside class="sidepanel">
         <a href="https://www.behance.net/nishijouchrou" class="sidepanel__link">
-            <img src="icons/social/behance.svg" alt="Git">
+            <img src="icons/social/behance.svg" alt="Behance">
             </a>
         <a href="https://github.com/TierieErde" class="sidepanel__link"><img src="icons/social/github.svg" alt="Git"></a>
         <a href="http://instagram.com/tierie_erde" class="sidepanel__link"><img src="icons/social/instagram.svg" alt="instagramm"></a>
-        <a href="http://t.me/Tierie" class="sidepanel__link"><img src="icons/social/telegram.svg" alt="telegram"></a>
+        <a href="http://t.me/Tierie" class="sidepanel__link"><img src="icons/social/telegram.svg" alt="Telegram"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Социальные сети</span></div>
     </aside>
@@ -84,11 +86,11 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#info">ОБО МНЕ</a></li>
-                    <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">WEB - РАЗРАБОТКА</a></li>
-                    <li class="menu__link"><a href="#">3D ДИЗАЙН И ВИЗУАЛИЗАЦИЯ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="index.html/#info">ОБО МНЕ</a></li>
+                    <li class="menu__link"><a href="index.html/#info__skills">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="index.html/#webdev">WEB - РАЗРАБОТКА</a></li>
+                    <li class="menu__link"><a href="index.html/#Design">3D ДИЗАЙН И ВИЗУАЛИЗАЦИЯ</a></li>
+                    <li class="menu__link"><a href="index.html/#Contacs">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="menu__social">
@@ -200,12 +202,9 @@
             </div>
             <div class="info__skills">
                 <div class="info__title">Навыки</div>
-                
                 <div class="info__skills__gridcontainer"> 
-                    
                     <div id="html-block" class="grid-elem hover-reveal" data-tooltip="HTML - язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. на нем создают структуру сайта"><img src="icons/brands/html5.svg" alt="html">HTML</div>
                     <div id="css-block" class="grid-elem hover-reveal" data-tooltip="Формальный язык описания внешнего вида веб-страницы"><img src="icons/brands/css3.svg" alt="css">CSS</div>
-
                     <div class="grid-elem hover-reveal" data-tooltip=" JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений."><img src="icons/brands/javascript.svg" alt="JS">JavaScript</div>
                     <div class="grid-elem hover-reveal" data-tooltip="Система контроля версий"><img src="icons/brands/git.svg" alt="git">Git</div>
                     <div class="grid-elem hover-reveal" data-tooltip="SASS это такой язык, код которого специальной ruby-программой транслируется в обычный CSS код."><img src="icons/brands/sass.svg" alt="sass">sass/scss</div>
@@ -219,19 +218,87 @@
                     <div class="grid-elem hover-reveal" data-tooltip="Программа для работы с материалами и быстрого текстурирования 3D-моделей"><img src="icons/brands/substance-3d-painter.png" alt="Substance3d">substance3d</div>
                     <div class="grid-elem hover-reveal" data-tooltip="Это инструмент для цифровой скульптуры , сочетающий в себе 3D / 2.5D моделирование,текстурирование и рисование."><img src="icons/brands/zbrush-seeklogo.com.svg" alt="zbrush">Zbrush</div>
                     <div class="grid-elem hover-reveal" data-tooltip="Редактор кода для кроссплатформенной разработки веб- и облачных приложений."><img src="icons/brands/visualstudiocode.svg" alt="VScode">Visual Studio Code</div>
-                    
-                 </div>
-                 <div class="info__tooltip"></div>
+                </div>
+                <div class="info__tooltip"></div>
             </div>
         </div>
     </section>
-    <section class="web-dev">
+    <section class="webdev">
         <div class="container">
-            <div class="title"></div>
+            <div class="webdev__title">Портфолио</div>,
+            <div class="webdev__title__WEBdev">WEB-разработка</div>
+            <div class="webdev__divider"></div> 
+            <div class="webdev__wrapper">
+                <a href="/src/puls" class="webdev__item">
+                    <img src="img/works/pulse.jpg" alt="puls">
+                    <div class="webdev__item__descr">Проект с формами валидации, табами, JS слайдером и отправкой писем.</div>
+                </a>
+                <a href="/src/uber" class="webdev__item">
+                    <img src="img/works/uber.jpg" alt="uber">
+                    <div class="webdev__item__descr">Веб-страница с адаптивной версткой и css анимациями.</div>
+                </a>
+                <a href="/src/wordpress" class="webdev__item">
+                    <img src="img/works/WP-inten.jpg" alt="wordpress">
+                    <div class="webdev__item__descr">Лэндинг пейдж с простой версткой и css стилизацией.</div>
+                </a>
+            </div>
         </div>
     </section>
-    
-    <script src="js/script.js"></script>
+    <section class=Design>
+        <div class="container">
+            <div class="Design__title">3D дизайн и визуализация</div>
+            <div class="Design__divider"></div>
+            <div class="Design__cards">
+                <div class="Design__card card1"><a href="https://www.behance.net/gallery/147638371/Nissan-300ZX-%28Fairlady-Z-Z31%29"><img src="icons/social/behance.svg" alt="Behance"> Nissan 300ZX (Z31)</a></div>
+                <div class="Design__card card2"><a href="https://www.behance.net/gallery/144398875/Ferrari-550-Maranello-CGI-Personal-Project"><img src="icons/social/behance.svg" alt="Behance">Ferrari 550 Maranello</a></div>
+                <div class="Design__card card3"><a href="https://www.behance.net/gallery/143120907/Lens-in-space"><img src="icons/social/behance.svg" alt="Behance">Lens in space</a></div>
+                <div class="Design__card card4"><a href="https://www.behance.net/gallery/143122159/Nostalgia-valves-cylinder-head-cover"><img src="icons/social/behance.svg" alt="Behance">Nostalgia BMW R7 cylinder head cover</a></div>
+                <div class="Design__card card5"><a href="https://www.behance.net/gallery/84663833/Full-CGI-Mercedes-Benz-GLE-coupe"><img src="icons/social/behance.svg" alt="Behance">Mercedes-Benz GLE</a></div>
+                <div class="Design__card card6"><a href="https://www.behance.net/gallery/153132717/Work-with-TY-flow-in-3ds-max"><img src="icons/social/behance.svg" alt="Behance">Tyflow particles</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="Contacs">
+        <div class="container">
+            <div class="Contacs__title">Контакты</div>
+            <div class="Contacs__wrapper">
+                <div class="Contacs__links">
+                    <div class="Contacs__subtitle">Если у вас есть идеи проектов, свяжитесь со мной и мы реализуем их вместе:</div>
+                    <a href="mailto:nishijouchrou@gmail.com"><i class="fa-regular fa-envelope"></i>email</a>
+                    <a href="http://t.me/Tierie"><i class="fa-brands fa-telegram"></i>Telegram</a>
+                    <a href="https://vk.com/toptracereu"><i class="fa-brands fa-vk"></i>ВКонтакте </a>
+                </div>
+                <div class="Contacs__formarea">
+                    <div class="Contacs__subtitle">Или оставьте ваши данные и я сам вам напишу:</div>
+                    <form action="#" class="Contacs__forms">
+                        <div class="Contacs__input">
+                            <input required name="name" id="name" type="text">
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="Contacs__input">
+                            <input required name="email" id="email" type="email">
+                            <label for="email">Ваша почта</label>
+                        </div>
+                        <div class="Contacs__Textarea">
+                            <textarea name="text" id="text"></textarea>
+                            <label for="text">Ваше сообщение</label>
+                        </div>
+                        <button class="Contacs__btn">Отправить сообщение</button>
+                        <div class="Contacs__policy">
+                            <input required type="checkbox" class="Contacs__checkbox">
+                            <div class="Contacs__policy__descr">Я согласен(а) с <a href="policy.html">политикой конфеденфиальности</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    <div class="Contacs__bgrd"  id="board"></div>   
+    </section>
+    <script src="js/pixelBoard.js"></script>
+    <script src="js/cards.js"></script>
     <script src="js/particle.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
+

@@ -4,11 +4,12 @@
     background-color: $bg-color1;
     &__descr {
         display: flex;
-         justify-content: space-between;
+        justify-content: space-between;
     }
         &__descr__text{
             position: absolute;
             top: 8%;
+            left: 8%;
             margin-left: 10px;
             }
         &__text__hello {
@@ -35,12 +36,12 @@
             right: 10%;
             position: absolute;
             top: 16%;
+            width: 20vw;
             height: auto;
-            width: 400px;
             &__main {
                 position: relative;
                 z-index: 3;
-                width: 400px;
+                width: 20vw;
                 height: auto;
                 transition: 0.5s all;
                 border: 0px solid $second-color;
@@ -56,7 +57,7 @@
                 right: 13%;
                 top: 10.5%;
                 height: 100%;
-                width: 400px;
+                width: 20vw;
                 z-index: 0;
                 transition: 1s all;
                 opacity: 0.27;

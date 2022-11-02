@@ -1,9 +1,7 @@
 .info {
-    
+    margin: 100px;   
     background-color: $bg-color2;
-    &__about {
-        padding-top: 40px; 
-    }
+    
     &__Behance {
         text-decoration: none;
         color: white;
@@ -14,7 +12,6 @@
         }
     }
     &__title {
-        
         text-align: center;
         font-size: 40px;
         color: $second-color;
@@ -34,12 +31,13 @@
     
         margin: 0 auto;
         width: 80%;
-        margin-top: 24px;
+        margin-top: 40px;
         display: flex;
         justify-content: space-around;
         // transition: 0.6s all;
     }
     &__exp__block {
+        width: 50%;
         align-items:center;
         padding-left: 5px;
         padding-right: 5px;
@@ -66,9 +64,16 @@
             color: $second-color;
             hr {
                 border: 1px solid $second-color;
+                &.active{
+                    border: 2px solid $second-color;
+                }
             }
         }
-        
+        hr {
+            &.active{
+                border: 2px solid $second-color;
+            }
+        }   
         // overflow: hidden;
         // -webkit-transition: height 0.3s ease;
         // transition: height 0.3s ease;
@@ -103,36 +108,35 @@
         }
     }
     &__skills {
+        // position: relative;
+        margin-top: 100px;
         display: flex;
         flex-direction: column;
     }
     &__skills__gridcontainer{
         position: relative;
-        margin: 0 auto;
+        margin-top: 24px;
         display: grid;
-        grid-template-columns: repeat(5, minmax(auto, auto));
-        gap: 10px;
-        // grid-auto-columns: minmax(100px, auto);
-        margin-bottom: 20px;
-        // align-items: center;
-        // justify-items: start;
-        justify-content: center;
+        grid-template-columns: repeat(5, minmax(80px, auto));
+        gap: 20px;
+        align-items: center;
     }
     .grid-elem {
-        padding: 5px 20px 5px 5px;
+        padding: 5px 5px 5px 5px;
         display: flex;
-        line-height: 42px;
-        // flex-wrap: wrap;
-        // justify-content: space-around;
+        line-height: 40px;
+        font-size: 17px;
+        flex-wrap:wrap;
+        justify-content: flex-start;
         width: auto;
         height: 50px;
         text-align: center;
-        align-items: stretch;
         color:white;
         background-color: $bg-color1;
         border-radius: 10px;
         transition: 0.6s all;
         img {
+            height: 40px;
             margin-right: 10px;
             margin-left: 10px;
         }
@@ -140,17 +144,17 @@
             background-color: $second-color;
         }
     }
-    &__tooltip{
+.info__tooltip {
         opacity: 0;
-        width: max-content;
-        max-width: 400px;
+        // width: max-content;
+        max-width: 350px;
         // flex-direction: row;
         flex-wrap: wrap;
         padding: 5px 5px 5px 5px;
-        
+        font-size: 18px;
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 0;
+        right: 0;
         z-index: 3;
         background-color: $second-color;
         color:white;
