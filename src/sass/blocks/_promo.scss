@@ -29,7 +29,13 @@
             font-size: 24px;
             font-weight: 700;
             margin-top: 20px;
-            color: $third-color;
+            color: rgba(126, 161, 140, 1);
+            -webkit-text-stroke: 1px rgb(126, 161, 140);
+            transition: 1s;
+            &:hover {
+                -webkit-text-stroke: 1px rgb(27, 240, 119);
+                color:  rgba(126, 161, 140, 0);
+            }
         }
         
         &__photo__link {
