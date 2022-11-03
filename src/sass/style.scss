@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: $bg-color2;
+    width: 100%;
 }
 .container {
     overflow: hidden;
@@ -29,4 +30,4 @@ body {
 @import 'blocks/webdev';
 @import 'blocks/Design';
 @import 'blocks/Contacs';
-@import 'blocks/media';
+@import 'blocks/media' ;
